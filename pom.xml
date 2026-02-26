@@ -1,0 +1,44 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>MavenBulidLifecycle</groupId>
+  <artifactId>MavenBulidLifecycle</artifactId>
+  <version>0.0.2-SNAPSHOT</version>
+  
+  <dependencies>
+<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>7.7.0</version>
+
+		</dependency>
+		
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>4.12.0</version>
+		</dependency>
+  </dependencies>
+  
+  <profiles>
+  	<profile>
+  			<id>ST</id>
+  			<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.5.4</version>
+				<configuration>
+					<suiteXmlFiles>
+						<suiteXmlFile>Smoketest.xml</suiteXmlFile>
+					</suiteXmlFiles>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+  	</profile>
+  </profiles>
+  
+  
+</project>
