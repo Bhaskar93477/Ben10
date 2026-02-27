@@ -1,5 +1,7 @@
 package GithubPractice;
 
+import org.testng.annotations.Test;
+
 public class Samplet {
 
 	@Test
